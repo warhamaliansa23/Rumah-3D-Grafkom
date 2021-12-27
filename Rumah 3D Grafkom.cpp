@@ -68,7 +68,27 @@ z1,float z2,float z3){
 
 
 //Bagian Andri Rozaldin_E1E119048
-
+glEnd();
+glBegin(GL_LINES);
+glColor3f(0,0,0);
+glVertex3d(8,1.8,4.5);
+glVertex3d(-8,1.8,4.5);
+glVertex3d(-8,1.8,-5.5);
+glVertex3d(8,1.8,-5.5);
+glColor3f(1,0,0);
+glVertex3d(-4.5,-1,-5.05);
+glVertex3d(-4.5,1,-5.05);
+glVertex3d(4.5,-1,-5.05);
+glVertex3d(4.5,1,-5.05);
+glEnd();
+glutSwapBuffers(); /*Fungsi berikutnya adalah glutSwapBuffers(),
+yaitu digunakan untuk menukar bagian belakan buffer menjadi buffer
+layar (screen buffer). Dalam modus double-buffered, perintah
+menggambar pada layar, tetapi menggambar pada buffer belakang layar.
+Pada saat ingin menampilkan gambar, gambar yang berada di buffer
+belakang layar dipindahkan ke buffer layar, sehingga menghasilkan
+animasi yang sempurna.*/
+}
 
 // bagian Yusril Usman_E1E120054
 int main(int argc, char** argv)
