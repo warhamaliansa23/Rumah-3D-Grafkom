@@ -71,4 +71,18 @@ z1,float z2,float z3){
 
 
 // bagian Yusril Usman_E1E120054
+int main(int argc, char** argv)
+{
+glutInit(&argc, argv);
+glutInitDisplayMode (GLUT_RGB | GLUT_DEPTH | GLUT_DOUBLE);
+glutInitWindowSize (500, 500);
+glutInitWindowPosition (100, 100);
+glutCreateWindow("Rumah|09_109,09_123,09_128");
+init ();
+glutDisplayFunc(display);
+glutKeyboardFunc(keyboard);
+glutMainLoop();
+return 0;
+}
+
 
