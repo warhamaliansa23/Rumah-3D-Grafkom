@@ -75,7 +75,77 @@ glColor3f(1,0,1);//belakang
 
 
 // bagian Nur Rahmat Hidaya Karismadi_E1E120086
+void display(void)
+{
+glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+glLoadIdentity (); //digunakan untuk me-nonaktifkan/me-resettransformasi sebelumnya
+glTranslatef(a,b,c); //digunakan untuk melakukan perpindahanposisi gelombang
+glRotatef(xpoz,1,0,0);
+glRotatef(ypoz,0,1,0);
+glRotatef(zpoz,0,0,1);
+glBegin(GL_QUADS);
+//Rumah
+coba(-8,-2,8,-2,8,2,-8,2,-5,3,0);//rumah
+coba(2,-2,8,-2,8,2,2,2,-5,4,0);//kamar
+coba(-8,-2,-7,-2,-7,2,-8,2,-5,4,0);//dindingpagar kiri
 
+coba(-8,-2,-7,-2,-7,0,-8,0,-5,5.5,0);
+coba(7,-2,8,-2,8,0,7,0,-5,5.5,0);
+cobaini(-3,5,0,0,8,2,-8,2,-5.5,4.5,0);
+glColor3f(1,1,1);//plafon depan
+glVertex3d(8,1.8,-3);
+glVertex3d(-8,1.8,-3);
+glVertex3d(-8,1.8,4.5);
+glVertex3d(8,1.8,4.5);//
+glVertex3d(8,1.8,4.5);
+glVertex3d(-8,1.8,4.5);
+glVertex3d(-8,2,4.5);
+glVertex3d(8,2,4.5);
+glColor3f(1,1,1);//plafon belakang
+glVertex3d(8,1.8,-5.5);
+glVertex3d(-8,1.8,-5.5);
+glVertex3d(-8,1.8,4.5);
+glVertex3d(8,1.8,4.5);
+glVertex3d(8,1.8,-5.5);
+glVertex3d(-8,1.8,-5.5);
+glVertex3d(-8,2,-5.5);
+glVertex3d(8,2,-5.5);
+glVertex3d(4,-0.5,4.1);//cendela kamar
+glVertex3d(6,-0.5,4.1);
+glVertex3d(6,1,4.1);
+glVertex3d(4,1,4.1);
+glVertex3d(2.7,-0.5,4.1);//cendela kamar2
+glVertex3d(3.8,-0.5,4.1);
+glVertex3d(3.8,1,4.1);
+glVertex3d(2.7,1,4.1);
+glVertex3d(-2,-2,3.05);//pintu depan
+glVertex3d(2,-2,3.05);
+glVertex3d(2,1.3,3.05);
+glVertex3d(-2,1.3,3.05);
+glVertex3d(-2,-2,-5.05);//pintu belakang
+glVertex3d(2,-2,-5.05);
+glVertex3d(2,1,-5.05);
+glVertex3d(-2,1,-5.05);
+glVertex3d(-4.5,-1,3.05);//cendela rmh1 depan
+glVertex3d(-2.5,-1,3.05);
+glVertex3d(-2.5,1.3,3.05);
+glVertex3d(-4.5,1.3,3.05);
+glVertex3d(-6.5,-1,-5.05);//cendela rmh1 belakang
+glVertex3d(-2.5,-1,-5.05);
+glVertex3d(-2.5,1,-5.05);
+glVertex3d(-6.5,1,-5.05);
+glVertex3d(-7,-1,3.05);//cendela rmh2 depan
+
+glVertex3d(-4.8,-1,3.05);
+glVertex3d(-4.8,1.3,3.05);
+glVertex3d(-7,1.3,3.05);
+glVertex3d(6.5,-1,-5.05);//cendela rmh2 belakang
+glVertex3d(2.5,-1,-5.05);
+glVertex3d(2.5,1,-5.05);
+glVertex3d(6.5,1,-5.05);
+glEnd();
+glBegin(GL_TRIANGLES);
+cobain(-3,5,0,0,8,2,-8,2,-5.5,4.5,0);
 
 // bagian Ratri Pramudita_E1E119075
 
