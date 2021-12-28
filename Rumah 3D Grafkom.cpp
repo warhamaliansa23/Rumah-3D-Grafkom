@@ -55,6 +55,17 @@ z1,float z2,float z3){
 }
 
 // bagian Hadijah Nisa Ifayatin_E1E120008
+void cobain(int x1,int y1,int x2,int y2,int x3,int y3,int x4,int
+y4,float z1,float z2,float z3){ //atap
+     glColor3f(1,1,1);//kanan
+     glVertex3d(x3,y3,z1);
+     glVertex3d(x3,y3,z2);
+     glVertex3d(x3,y1,z3);
+     glColor3f(1,1,1);//kiri
+     glVertex3d(x4,y4,z2);
+     glVertex3d(x4,y4,z1);
+     glVertex3d(x4,y1,z3);
+}
 
 // bagian La Ode Muhamad Ilham_E1E120030
 void cobaini(int x1,int y1,int x2,int y2,int x3,int y3,int x4,int
