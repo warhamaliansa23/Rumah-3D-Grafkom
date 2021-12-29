@@ -18,7 +18,7 @@
 
 // bagian  Warham Aliansa _E1E120102
 #include <stdlib.h>
-#include <GLUT/glut.h>
+#include <GL/glut.h>
 static float ypoz = 0, zpoz = 0, xpoz = 0,a = 0, b = 0,c = -10;
 void coba(int x1,int y1,int x2,int y2,int x3,int y3,int x4,int y4,int
 z1,float z2,float z3){
@@ -84,7 +84,17 @@ glColor3f(1,0,1);//belakang
 
 // bagian Ita Puspita _E1E120072
 
-
+void init(void)
+{
+    glClearColor (0.0, 0.0, 0.0, 0.0);
+    glOrtho(-12,12,-6,6,-35,35);
+    glEnable(GL_DEPTH_TEST);
+    glShadeModel (GL_SMOOTH);
+    glMatrixMode (GL_PROJECTION);
+    glLoadIdentity ();
+    gluPerspective(80.0,2.2, 1.0, 20.0);
+    glMatrixMode (GL_MODELVIEW);
+}
 // bagian Nur Rahmat Hidaya Karismadi_E1E120086
 void display(void)
 {
@@ -160,8 +170,6 @@ cobain(-3,5,0,0,8,2,-8,2,-5.5,4.5,0);
 
 // bagian Ratri Pramudita_E1E119075
 
-
-//Bagian Andri Rozaldin_E1E119048
 glEnd();
 glBegin(GL_LINES);
 glColor3f(0,0,0);
@@ -184,6 +192,55 @@ belakang layar dipindahkan ke buffer layar, sehingga menghasilkan
 animasi yang sempurna.*/
 }
 
+//Bagian Andri Rozaldin_E1E119048
+void keyboard(unsigned char key, int x, int y)
+{
+switch (key) {
+// These will allow you to force some extra rotation by pressing the 'y' and 'z' key.
+
+case 'x':
+xpoz=xpoz+5;
+if (xpoz>360) xpoz=0;
+glutPostRedisplay();
+break;
+case 'y':
+ypoz=ypoz+5;
+if (ypoz>360) ypoz=0;
+glutPostRedisplay();
+break;
+case 'z':
+zpoz = zpoz+1;
+if (zpoz>360) zpoz=0;
+
+glutPostRedisplay();
+break;
+case 'w':
+b = b + 1;
+glutPostRedisplay();
+break;
+case 's':
+b = b - 1;
+glutPostRedisplay();
+break;
+case 'a':
+a = a + 1;
+glutPostRedisplay();
+break;
+case 'd':
+a = a - 1;
+glutPostRedisplay();
+break;
+case 'q':
+c = c + 1;
+glutPostRedisplay();
+break;
+case 'e':
+c = c - 1;
+glutPostRedisplay();
+break;
+
+}
+}
 // bagian Yusril Usman_E1E120054
 int main(int argc, char** argv)
 {
