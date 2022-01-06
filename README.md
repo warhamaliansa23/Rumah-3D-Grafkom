@@ -8,9 +8,3 @@ TUGAS FINAL = MEMBUAT PROGRAM 3D RUMAH
 6. Ratri Pramudita_E1E119075
 7. Andri Rozaldin_E1E119048
 8. Yusril Usman_E1E120054
-
-
-ilham ganteng
-jangan begitu ya lain kali
-
-ini branch ilham
